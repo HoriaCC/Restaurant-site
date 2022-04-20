@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kitchen'eta</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-container">
+      <h1></h1>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <!-- <div class="navbar" id="myNavbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div> -->
+    </div>
+    <div class="middle-container">
+      <h2>Come and taste the real chinese taste!</h2>
+      <!-- Slide Show with location -->
+      <div class="slideshow-container">
+        <div class="row">
+          <div class="mySlides fade">
+            <img src="images/interior1.jpg" alt="image" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="images/interior2.jpg" alt="image" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="images/interior3.jpg" alt="image" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- Reviews -->
+      <!-- <h3>Here is what our clients are saying about us:</h3>
+      <div class="reviews">
+        <div class="clients">
+          <p>Mark</p>
+          <p>One of the best places in town!</p>
+        </div>
+        <div class="clients">
+          <p>Jenny</p>
+          <p>I love this place.</p>
+        </div>
+        <div class="clients">
+          <p>Rick</p>
+          <p>Very cozy and good food.</p>
+        </div>
+       </div> -->
+
+       <!-- copyright -->
+    </div>
+    <div class="bottom-container">
+      <p class="copyright">© 2022 Kitchen'eta</p>
+    </div>
+
+    <!-- Script for navbar -->
+    <!-- <script>
+      function myFunction() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script> -->
+
+    <!-- Script for slideshow -->
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+  </body>
+</html>
